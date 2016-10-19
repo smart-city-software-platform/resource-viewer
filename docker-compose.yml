@@ -1,0 +1,9 @@
+resource-viewer:
+  build: .
+  environment:
+    NODE_ENV: development
+  ports:
+    - "4200:4200"
+  volumes:
+    - .:/resource-viewer
+    - /resource-viewer/node_modules
