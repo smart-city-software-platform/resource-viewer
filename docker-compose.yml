@@ -2,6 +2,7 @@ resource-viewer:
   build: .
   environment:
     NODE_ENV: development
+  command: server --watcher polling
   ports:
     - "4200:4200"
   volumes:
