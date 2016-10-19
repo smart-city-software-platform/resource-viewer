@@ -8,3 +8,4 @@ resource-viewer:
   volumes:
     - .:/resource-viewer
     - /resource-viewer/node_modules
+    - /resource-viewer/bower_components
