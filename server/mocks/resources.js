@@ -16,11 +16,12 @@ module.exports = function(app) {
         "collect_interval": 5,
         "description": "I am a dummy sensor",
         "uuid": "db19668b-febc-48f0-bb88-ee16f4d9fd71",
-        "city": "SÃ£o Paulo",
-        "neighborhood": "ButantÃ£",
-        "state": "SÃ£o Paulo",
+        "city": "São Paulo",
+        "neighborhood": "Butantã",
+        "state": "São Paulo",
         "postal_code": "05508-000",
-        "country": "Brazil"
+        "country": "Brazil",
+        "capabilities": ["temperature"]
       }, {
         "id": 4,
         "uri": "example.com",
@@ -32,9 +33,9 @@ module.exports = function(app) {
         "collect_interval": 5,
         "description": "I am a dummy sensor",
         "uuid": "db19668b-febc-48f0-bb88-ee16f4d9fd71",
-        "city": "SÃ£o Paulo",
-        "neighborhood": "ButantÃ£",
-        "state": "SÃ£o Paulo",
+        "city": "São Paulo",
+        "neighborhood": "Butantã",
+        "state": "São Paulo",
         "postal_code": "05508-000",
         "country": "Brazil"
       }, {
@@ -48,9 +49,9 @@ module.exports = function(app) {
         "collect_interval": 5,
         "description": "I am a dummy sensor",
         "uuid": "db19668b-febc-48f0-bb88-ee16f4d9fd71",
-        "city": "SÃ£o Paulo",
-        "neighborhood": "ButantÃ£",
-        "state": "SÃ£o Paulo",
+        "city": "São Paulo",
+        "neighborhood": "Butantã",
+        "state": "São Paulo",
         "postal_code": "05508-000",
         "country": "Brazil"
       }, {
@@ -64,9 +65,9 @@ module.exports = function(app) {
         "collect_interval": 5,
         "description": "I am a dummy sensor",
         "uuid": "db19668b-febc-48f0-bb88-ee16f4d9fd71",
-        "city": "SÃ£o Paulo",
-        "neighborhood": "ButantÃ£",
-        "state": "SÃ£o Paulo",
+        "city": "São Paulo",
+        "neighborhood": "Butantã",
+        "state": "São Paulo",
         "postal_code": "05508-000",
         "country": "Brazil"
       }]
