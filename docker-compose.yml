@@ -1,11 +1,18 @@
-resource-viewer:
-  build: .
-  environment:
-    NODE_ENV: development
-  command: server --watcher polling
-  ports:
-    - "4200:4200"
-  volumes:
-    - .:/resource-viewer
-    - /resource-viewer/node_modules
-    - /resource-viewer/bower_components
+version: '2'
+services:
+  resource-viewer:
+    build: .
+    environment:
+      NODE_ENV: development
+    command: server --watcher polling
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/resource-viewer
+      - /resource-viewer/node_modules
+      - /resource-viewer/bower_components
+
+networks:
+  default:
+    external:
+      name: platform
