@@ -5,8 +5,8 @@ services:
     command: npm install && ember server
     environment:
       NODE_ENV: development
-      RESOURCE_CATALOGUER: resource-cataloguer:3000
-      DATA_COLLECTOR: data-collector:3000
+      RESOURCE_CATALOGUER: http://localhost:3000
+      DATA_COLLECTOR: http://localhost:4000
     command: server --watcher polling
     ports:
       - "4200:4200"
