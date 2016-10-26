@@ -11,5 +11,8 @@ test('visiting /', function(assert) {
     assert.equal(find('h1').text(), 'Resources');
     assert.equal(find('th').first().text(), 'ID');
     assert.equal(find('th').get(1).innerHTML, 'Description');
+    assert.equal(find('th').get(2).innerHTML, 'Address');
+    assert.equal(find('th').get(3).innerHTML, 'Capacities');
+    assert.equal(find('th').get(4).innerHTML, 'Collect Interval');
   });
 });

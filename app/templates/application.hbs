@@ -1,21 +1,27 @@
 <div class="container">
   {{partial 'navbar'}}
-  
+
   <h1>Resources</h1>
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>ID</th>
         <th>Description</th>
+        <th>Address</th>
+        <th>Capacities</th>
+        <th>Collect Interval</th>
       </tr>
     </thead>
     <tbody>
       {{#each model as |resource|}}
       <tr>
-        <th>{{resource.uuid}}</th>
+        <td>{{resource.uuid}}</td>
         <td>{{resource.description}}</td>
+        <td>{{resource.address}}</td>
+        <td>{{resource.capabilities}}</td>
+        <td>{{resource.collect_interval}}</td>
       </tr>
       {{/each}}
     </tbody>
-  </table> 
+  </table>
 </div>
