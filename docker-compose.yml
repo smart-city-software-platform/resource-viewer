@@ -2,8 +2,11 @@ version: '2'
 services:
   resource-viewer:
     build: .
+    command: npm install && ember server
     environment:
       NODE_ENV: development
+      RESOURCE_CATALOGUER: resource-cataloguer:3000
+      DATA_COLLECTOR: data-collector:3000
     command: server --watcher polling
     ports:
       - "4200:4200"

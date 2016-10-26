@@ -23,12 +23,8 @@ cd $BASE_DIR/..
 sudo docker -v > /dev/null
 verify "Error: You need to install docker first!"
 
-echo "Installing and updating base image."
-sudo docker pull node:4.2.3
-verify "Error: downloading debian:unstable image."
-
 echo "Building docker image."
-sudo docker build -t $IMAGE_NAME .
+sudo docker-compose build
 verify "Error: building docker image."
 
 echo "Creating shared network."

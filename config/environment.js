@@ -25,6 +25,8 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.collector = process.env.DATA_COLLECTOR;
+    ENV.cataloguer = process.env.RESOURCE_CATALOGUER;
   }
 
   if (environment === 'test') {
