@@ -39,6 +39,7 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.cataloguer = 'http://localhost:4200/api';
+    ENV.collector = 'http://localhost:4200';
   }
 
   if (environment === 'production') {

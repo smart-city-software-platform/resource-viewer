@@ -2,7 +2,6 @@ version: '2'
 services:
   resource-viewer:
     build: .
-    command: npm install && ember server
     environment:
       NODE_ENV: development
       RESOURCE_CATALOGUER: http://localhost:3000
