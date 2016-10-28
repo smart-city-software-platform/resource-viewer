@@ -16,3 +16,9 @@ test('visiting /', function(assert) {
     assert.equal(find('th').get(4).innerHTML, 'Collect Interval');
   });
 });
+
+test('get stream data', function(assert) {
+  visit('/');
+  click('table tbody tr th');
+  andThen(() => assert.equal($('[role="tooltip"]').text().replace(/^\s+|\s+$/g, '').split(':')[0], 'Temperature'));
+});

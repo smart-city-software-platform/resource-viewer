@@ -15,7 +15,16 @@
     <tbody>
       {{#each model as |resource|}}
       <tr>
-        <td>{{resource.uuid}}</td>
+        <th>
+          {{resource.uuid}}
+          {{#tooltip-on-element event="click" onShow=(action "updateUuid" resource.uuid)}}
+            {{#each-in capability as |capability values|}}
+                {{#each values as |values|}}
+                  {{capability}}: {{values.value}}
+                {{/each}}
+            {{/each-in}}
+          {{/tooltip-on-element}}
+        </th>
         <td>{{resource.description}}</td>
         <td>{{resource.address}}</td>
         <td>{{resource.capabilities}}</td>
