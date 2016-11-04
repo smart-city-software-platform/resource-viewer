@@ -25,6 +25,8 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.collector = process.env.DATA_COLLECTOR;
+    ENV.cataloguer = process.env.RESOURCE_CATALOGUER;
   }
 
   if (environment === 'test') {
@@ -36,6 +38,8 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.cataloguer = 'http://localhost:4200/api';
+    ENV.collector = 'http://localhost:4200/api/infos/uuid';
   }
 
   if (environment === 'production') {
