@@ -12,7 +12,7 @@ test('updateUuid', function(assert) {
   let controller = this.subject();
   assert.ok(controller);
 
-  controller.send('updateUuid', 3);
+  controller.send('updateUuid', 'ae9cf502-5ed2-47d4-914c-c1caec1c41c4');
 
   return wait().then(() => {
     assert.equal(controller.get('capability').Temperature[0].value, 28.237);

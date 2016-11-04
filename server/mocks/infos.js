@@ -29,11 +29,10 @@ module.exports = function(app) {
     res.status(201).end();
   });
 
-  infosRouter.get('/:id', function(req, res) {
+  infosRouter.post('/:id', function(req, res) {
     res.send({
-      'infos': {
-        // id: req.params.id,
-        id: 0,
+      'resources': [{
+        id: req.params.id,
         "uuid": "ae9cf502-5ed2-47d4-914c-c1caec1c41c4",
         "capabilities": {
           "Temperature": [
@@ -48,7 +47,7 @@ module.exports = function(app) {
           }]
         }
 
-      }
+      }]
     });
   });
 
