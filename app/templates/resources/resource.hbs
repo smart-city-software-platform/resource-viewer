@@ -1,1 +1,18 @@
-{{outlet}}
+<div class='container'>
+
+  <div class='well'>
+    <h2>Sensor ID: {{model.resources.[0].uuid}}</h2>
+    <ul class='list-group'>
+    <h2>Capacidades:</h2>
+    {{#each-in model.resources.[0].capabilities as |capability values|}}
+      <h3>{{capability}} :</h3>
+      <li>
+        {{#each-in values as |key value|}}
+          <h4>{{value.value}}</h4>
+        {{/each-in}}
+      </li>
+    {{/each-in}}
+    </ul>
+  </div>
+
+</div>
