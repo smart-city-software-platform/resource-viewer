@@ -8,7 +8,7 @@
         <th>Description</th>
         <th>Address</th>
         <th>Capacities</th>
-        <th>Collect Interval</th>
+        <th>More Info</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
         <td>{{resource.description}}</td>
         <td>{{resource.address}}</td>
         <td>{{resource.capabilities}}</td>
-        <td>{{resource.collect_interval}}</td>
+        <td>{{#link-to 'resources.resource' resource.id}}more info{{/link-to}}</td>
       </tr>
       {{/each}}
     </tbody>
