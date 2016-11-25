@@ -22,13 +22,9 @@ test('shows map', function(assert) {
   this.set('lat', '23');
   this.set('lng', '46');
   this.set('myLatlng', new google.maps.LatLng(this.get('lat'), this.get('lng')));
-  console.log(this.get('myLatlng').lat());
+
   assert.equal(this.get('myLatlng').lat(), this.get('lat'), 'has correct lat');
-
-  console.log(this.get('myLatlng').lng());
   assert.equal(this.get('myLatlng').lng(), this.get('lng'), 'has correct lng');
-
-
 
   var mapOptions = {
     zoom: 15,
@@ -36,7 +32,6 @@ test('shows map', function(assert) {
   };
 
   this.set('map', new google.maps.Map(document.getElementById("map"), mapOptions));
-  console.log(this.get('map.center'));
 
   assert.equal(this.get('map.center'), this.get('myLatlng'), 'map rendered, and has correct center')
 });
