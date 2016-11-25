@@ -19,7 +19,7 @@ test('updateUuid', function(assert) {
   controller.send('updateUuid', 'ae9cf502-5ed2-47d4-914c-c1caec1c41c4');
 
   return wait().then(() => {
-    assert.equal(controller.get('capability').Temperature[0].value, 28.237);
+    assert.equal(controller.get('capability').location[0].value, "[\"-12\", \"-58\"]");
   });
 
 });

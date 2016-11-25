@@ -13,12 +13,12 @@ test('visiting /', function(assert) {
     assert.equal(find('th').get(1).innerHTML, 'Description');
     assert.equal(find('th').get(2).innerHTML, 'Address');
     assert.equal(find('th').get(3).innerHTML, 'Capacities');
-    assert.equal(find('th').get(4).innerHTML, 'Collect Interval');
+    assert.equal(find('th').get(4).innerHTML, 'More Info');
   });
 });
 
 test('get stream data', function(assert) {
   visit('/');
   click('table tbody tr th');
-  andThen(() => assert.equal($('[role="tooltip"]').text().replace(/^\s+|\s+$/g, '').split(':')[0], 'Temperature'));
+  andThen(() => assert.equal($('[role="tooltip"]').text().replace(/^\s+|\s+$/g, '').split(':')[0], 'location'));
 });
