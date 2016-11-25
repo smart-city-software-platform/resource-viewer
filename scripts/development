@@ -16,6 +16,9 @@ verify () {
   fi
 }
 
+CURRENT_DIR=`pwd`
+cd $BASE_DIR
+
 if [ "$1" = "start" ]; then
   echo "${CYAN}"
   echo "Starting service $PROJECT_NAME"
@@ -64,3 +67,4 @@ if [ "$1" = "exec" ]; then
   verify "Cannot execute command into the container. Please verify logs"
 fi
 
+cd $CURRENT_DIR
