@@ -10,4 +10,4 @@ before_script:
 
 ember:
   script:
-      - ember test
+      - ember test --test-port 4200
