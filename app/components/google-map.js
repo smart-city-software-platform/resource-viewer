@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  map: null,
+  marker: null,
+
   lat: Ember.computed('coords', function() {
     return this.coords.split(/"/)[1];
   }),
@@ -14,25 +17,27 @@ export default Ember.Component.extend({
     return new google.maps.LatLng(this.get('lat'), this.get('lng'));
   }),
 
-  map: Ember.computed('myLatlng', function() {
-    var mapOptions = {
-      zoom: 15,
-      center: this.get('myLatlng'),
-    };  
-    return new google.maps.Map(document.getElementById("map"), mapOptions);
-  }),
-
-  marker: Ember.computed('map', 'myLatlng', function() {
-    return new google.maps.Marker({
-      position: this.get('myLatlng'),
-      map: this.get('map'),
-    });
-  }),
-
-
   didInsertElement() {
-    this.get('map');
-    this.get('marker');
-  }
+    let position = this.get('myLatlng');
+    let mapOptions = {
+      zoom: 8,
+      center: position,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      imageDefaultUI: true
+    };
+    let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    let marker = new google.maps.Marker({
+      position: position,
+      map: map,
+    });
 
+    this.set('map', map);
+    this.set('marker', marker);
+  },
+
+  didUpdateAttrs() {
+    let position = this.get('myLatlng');
+    this.get('marker').setPosition(position);
+    this.get('map').panTo(position);
+  },
 });
