@@ -20,15 +20,15 @@ verify () {
 CURRENT_DIR=`pwd`
 cd $BASE_DIR/..
 
-sudo docker -v > /dev/null
+docker -v > /dev/null
 verify "Error: You need to install docker first!"
 
 echo "Building docker image."
-sudo docker-compose build
+docker-compose build
 verify "Error: building docker image."
 
 echo "Creating shared network."
-sudo docker network create $NETWORK 2> /dev/null
+docker network create $NETWORK 2> /dev/null
 
 cd $CURRENT_DIR
 
