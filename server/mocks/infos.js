@@ -7,18 +7,11 @@ module.exports = function(app) {
     res.send({
       'infos': [
       {
-        "id": 3,
         "uuid": "ae9cf502-5ed2-47d4-914c-c1caec1c41c4",
-        "capabilities": {
-          "Temperature": [
-          {
-            "value": "28.237",
-            "date": "2016-06-20T06:37:52.000Z"
-          }],
-          "Humidity": [
-          {
-            "value": "28.247",
-            "date": "2016-06-20T06:37:52.000Z"
+        "capabilities":{
+          "location":[{
+            "value":"[\"-12\", \"-58\"]",
+            "date":"2016-11-25T16:48:56.000Z"
           }]
         }
       }]
@@ -32,21 +25,13 @@ module.exports = function(app) {
   infosRouter.post('/:id', function(req, res) {
     res.send({
       'resources': [{
-        id: req.params.id,
         "uuid": "ae9cf502-5ed2-47d4-914c-c1caec1c41c4",
-        "capabilities": {
-          "Temperature": [
-          {
-            "value": "28.237",
-            "date": "2016-06-20T06:37:52.000Z"
-          }],
-          "Humidity": [
-          {
-            "value": "28.247",
-            "date": "2016-06-20T06:37:52.000Z"
+        "capabilities":{
+          "location":[{
+            "value":"[\"-12\", \"-58\"]",
+            "date":"2016-11-25T16:48:56.000Z"
           }]
         }
-
       }]
     });
   });
