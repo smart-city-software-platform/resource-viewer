@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+const google = window.google;
+
 export default Ember.Component.extend({
 
   map: null,
@@ -20,7 +22,7 @@ export default Ember.Component.extend({
   didInsertElement() {
     let position = this.get('myLatlng');
     let mapOptions = {
-      zoom: 8,
+      zoom: 11,
       center: position,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       imageDefaultUI: true

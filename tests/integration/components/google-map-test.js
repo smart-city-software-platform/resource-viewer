@@ -5,17 +5,8 @@ moduleForComponent('google-map', 'Integration | Component | google map', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  expect(0);
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{google-map coords='[\"-12\", \"-58\"]'}}`);
-  // assert.equal(this.$().text().trim(), 'Mapa:');
-});
-
 test('shows map', function(assert) {
-  expect(3);
+  let google = window.google;
 
   this.render(hbs`{{google-map coords='[\"-12\", \"-58\"]'}}`);
 
@@ -33,5 +24,5 @@ test('shows map', function(assert) {
 
   this.set('map', new google.maps.Map(document.getElementById("map"), mapOptions));
 
-  assert.equal(this.get('map.center'), this.get('myLatlng'), 'map rendered, and has correct center')
+  assert.equal(this.get('map.center'), this.get('myLatlng'), 'map rendered, and has correct center');
 });
