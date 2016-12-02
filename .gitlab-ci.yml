@@ -10,4 +10,4 @@ before_script:
 
 ember:
   script:
-      - ember test --test-port 4200
+      - COVERAGE=true ember test --test-port 4200
