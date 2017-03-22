@@ -12,7 +12,7 @@ RED='\033[0;31m'
 
 verify () {
   if [ $? != 0 ]; then
-    echo "${RED}$1${NC}"
+    printf "${RED}$1${NC}"
     exit 2
   fi
 }
@@ -32,9 +32,9 @@ docker network create $NETWORK 2> /dev/null
 
 cd $CURRENT_DIR
 
-echo "${CYAN}"
+printf "${CYAN}"
 echo "####################################"
 echo "    To start the service run :"
 echo "    $ scripts/development start"
 echo "####################################"
-echo "${NC}"
+printf "${NC}"
